@@ -1,6 +1,6 @@
-//Lesson1.Задание 1. Компиляция и запуск приложения из командной строки
-//( нужно дописать калькулятор(класс Calc))
-
+//Lesson1.Г‡Г Г¤Г Г­ГЁГҐ 1. ГЉГ®Г¬ГЇГЁГ«ГїГ¶ГЁГї ГЁ Г§Г ГЇГіГ±ГЄ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї ГЁГ§ ГЄГ®Г¬Г Г­Г¤Г­Г®Г© Г±ГІГ°Г®ГЄГЁ
+//( Г­ГіГ¦Г­Г® Г¤Г®ГЇГЁГ±Г ГІГј ГЄГ Г«ГјГЄГіГ«ГїГІГ®Г°(ГЄГ«Г Г±Г± Calc))
+//hello
 
 		import java.io.BufferedReader;
 		import java.io.IOException;
@@ -18,59 +18,59 @@
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		
 		
-		//Считываем данные у пользователя: два числа и выбор операции
+		//Г‘Г·ГЁГІГ»ГўГ ГҐГ¬ Г¤Г Г­Г­Г»ГҐ Гі ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї: Г¤ГўГ  Г·ГЁГ±Г«Г  ГЁ ГўГ»ГЎГ®Г° Г®ГЇГҐГ°Г Г¶ГЁГЁ
 		
-		do { // С помощью цикла Do while в конце запрашиваем у пользователя повтор выполнения программы
+		do { // Г‘ ГЇГ®Г¬Г®Г№ГјГѕ Г¶ГЁГЄГ«Г  Do while Гў ГЄГ®Г­Г¶ГҐ Г§Г ГЇГ°Г ГёГЁГўГ ГҐГ¬ Гі ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї ГЇГ®ГўГІГ®Г° ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
 		
-		System.out.print("\n     Введите первое число: ");
+		System.out.print("\n     Г‚ГўГҐГ¤ГЁГІГҐ ГЇГҐГ°ГўГ®ГҐ Г·ГЁГ±Г«Г®: ");
 
 		a=Double.parseDouble(br.readLine());
 
-		System.out.print("\n     Введите второе число: ");
+		System.out.print("\n     Г‚ГўГҐГ¤ГЁГІГҐ ГўГІГ®Г°Г®ГҐ Г·ГЁГ±Г«Г®: ");
 
 		b=Double.parseDouble(br.readLine());
 
-		System.out.println("\n       1 - сложение");
-		System.out.println("       2 - вычитание");
-		System.out.println("       3 - умножение");		
-		System.out.println("       4 - деление");		
+		System.out.println("\n       1 - Г±Г«Г®Г¦ГҐГ­ГЁГҐ");
+		System.out.println("       2 - ГўГ»Г·ГЁГІГ Г­ГЁГҐ");
+		System.out.println("       3 - ГіГ¬Г­Г®Г¦ГҐГ­ГЁГҐ");		
+		System.out.println("       4 - Г¤ГҐГ«ГҐГ­ГЁГҐ");		
 				
-		// Если пользователь вводит некорректное значение выбора
-		// то сообщаем ему про ошибку и повторяем запрос
+		// Г…Г±Г«ГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гј ГўГўГ®Г¤ГЁГІ Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГўГ»ГЎГ®Г°Г 
+		// ГІГ® Г±Г®Г®ГЎГ№Г ГҐГ¬ ГҐГ¬Гі ГЇГ°Г® Г®ГёГЁГЎГЄГі ГЁ ГЇГ®ГўГІГ®Г°ГїГҐГ¬ Г§Г ГЇГ°Г®Г±
 		do{
-			System.out.print("\n     Выберите действие : ");
+			System.out.print("\n     Г‚Г»ГЎГҐГ°ГЁГІГҐ Г¤ГҐГ©Г±ГІГўГЁГҐ : ");
 			act=Integer.parseInt(br.readLine());
 			if (act < 1 || act > 4) System.out.println(" \n      ERROR ! ! !");	
 		}while ( act < 1 || act > 4 );
 		    
 			Calculator.a1 = a;
 			Calculator.b1 = b;
-			// обращаемся к классу calc для проведения вычислений 
+			// Г®ГЎГ°Г Г№Г ГҐГ¬Г±Гї ГЄ ГЄГ«Г Г±Г±Гі calc Г¤Г«Гї ГЇГ°Г®ГўГҐГ¤ГҐГ­ГЁГї ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГ© 
 			switch(act) {
 				case 1:
 					res = Calculator.sum();
-					System.out.print("\n   Результат: " + res + "\n");
+					System.out.print("\n   ГђГҐГ§ГіГ«ГјГІГ ГІ: " + res + "\n");
 					break;
 				case 2:
 					res = Calculator.sub();
-					System.out.print("\n   Результат: " + res + "\n");					
+					System.out.print("\n   ГђГҐГ§ГіГ«ГјГІГ ГІ: " + res + "\n");					
 					break;
 				case 3:
 					res = Calculator.mul();
-					System.out.print("\n   Результат: " + res + "\n");
+					System.out.print("\n   ГђГҐГ§ГіГ«ГјГІГ ГІ: " + res + "\n");
 					break;
 				case 4:
 					res = Calculator.div();
-					System.out.print("\n   Результат: " + res + "\n");
+					System.out.print("\n   ГђГҐГ§ГіГ«ГјГІГ ГІ: " + res + "\n");
 					break;
 			}
 		
 		
 		
-		System.out.print("\n     Повторить выполнение программы? (1 - ДА, 0 - НЕТ) : ");
+		System.out.print("\n     ГЏГ®ГўГІГ®Г°ГЁГІГј ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГҐ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»? (1 - Г„ГЂ, 0 - ГЌГ…Г’) : ");
 		
 			repeat=Integer.parseInt(br.readLine());
-			if (repeat < 0 || repeat > 1) System.out.println(" \n      ERROR ! ! !");	// если пользователь вводит четонето, сообщаем про ошибку
+			if (repeat < 0 || repeat > 1) System.out.println(" \n      ERROR ! ! !");	// ГҐГ±Г«ГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гј ГўГўГ®Г¤ГЁГІ Г·ГҐГІГ®Г­ГҐГІГ®, Г±Г®Г®ГЎГ№Г ГҐГ¬ ГЇГ°Г® Г®ГёГЁГЎГЄГі
 		
 		
 		
@@ -82,7 +82,7 @@
 
 		class Calc {
 			    
-			double a1, b1; // инициализация переменных внутри класса Calc
+			double a1, b1; // ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»Гµ ГўГ­ГіГІГ°ГЁ ГЄГ«Г Г±Г±Г  Calc
 			
 			double sum(){     
 				return a1 + b1;
